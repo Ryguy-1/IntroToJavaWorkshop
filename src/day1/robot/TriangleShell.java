@@ -19,12 +19,14 @@ public class TriangleShell {
 			
 	
 			// 9. Change the color of the pen to a random color
-	
+			phil.setRandomPenColor();
 			// 8. Increase the length of the side by 10 pixels
 			length+=10;
 			// 5. call your drawTriangle() method using your length variable
 		drawTriangle(length);
-			// 10. Turn the tortoise 6 degrees to the right
+			// 10. Turn the robot 6 degrees to the right
+		phil.turn(6);
+		
 		}
 	}
 	
@@ -32,6 +34,7 @@ public class TriangleShell {
 	private void drawTriangle(int length) {
 		phil.move(length);
 		phil.turn(120);
+		phil.penDown();
 	}
 	
 
