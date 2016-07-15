@@ -3,7 +3,8 @@ import org.jointheleague.graphical.robot.Robot;
 
 /*** Teacher's note ***/
  /* Before beginning recipe: 
- * 1. ask students to find and explain the variable in this recipe. 
+ * 1. ask students to find and explain the variable in this recipe.
+ *  
  * 2. ask students what robot commands they think they will use to make picture in the laminated hand-outs. */
 
 public class FlamingNinjaStar {
@@ -17,31 +18,37 @@ public class FlamingNinjaStar {
 		// *15. Make some adjustments to see what other kinds of shapes you can make.
 
 		// 1. Make a new robot, and set it's pen down.
-
+Robot Phil=new Robot();
+Phil.penDown();
 		// 12. Set the robot speed to 10
-
+Phil.setSpeed(10);
 		// 13. Make all the code below repeat 25 times
-
+for (int i = 0; i < 25; i++) {
+	
 			// 2. Turn the robot 1/8 of a circle
-		
+		Phil.turn(360/8);
 			// 3. Move the robot 64 pixels
-
+Phil.move(64);
 			
 			// 4. Turn the robot 40 degrees to the LEFT. (Negative numbers will turn the robot counter-clockwise.)
+			Phil.turn(-40);
 			
-			// 5. Move the robot the distance in the variable flameSize
+			Phil.setPenColor(255,0,0);
 			
+			Phil.move(flameSize);
 			// 6. Turn the robot 170 degrees
-			
+			Phil.turn(170);
 			// 7. Move the robot the distance in the variable flameSize (again)
-			
-			// 8. Turn the robot 64 degrees to the right
-			
+			Phil.move(flameSize);
+			Phil.setPenColor(0, 0, 0);
+			Phil.turn(64);
 			// 9. Move the robot the distance in the variable baseSize
-			
+			Phil.move(baseSize);
 			// 10. Check that your shape is the same as Figure 1. This is one arm of the ninja star.
+			
 			// 11. Color your ninja star like Figure 2.
-		
+
+}
 	}
 
 }
